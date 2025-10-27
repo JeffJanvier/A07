@@ -3,46 +3,73 @@
   --accent-color: #800000;
 }
 
+/* ---------- Reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 /* ---------- General page styles ---------- */
 body {
   font-family: "Times New Roman", Times, serif;
   color: #000;
   background-color: #fff;
+  width: 80%;
   margin: 0 auto;
   padding: 2rem;
   line-height: 1.6;
   max-width: 800px;
-   border: 1px solid #000; 
+  border: 2px solid var(--accent-color);
+}
+
+/* ---------- Default spacing ---------- */
+h1, h2, h3, p, ul {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+
+ul {
+  margin-left: 2em;
+  list-style-type: disc;
+  padding-left: 1rem;
+}
+
+ul li {
+  margin: 0.3rem 0;
 }
 
 /* ---------- Header ---------- */
 header {
   padding-bottom: 1rem;
-  overflow: auto; /* allows floated image to stay inside header */
-  border-bottom: none;
+  overflow: auto; /* keeps floated image inside */
+  border-bottom: 2px solid var(--accent-color);
+  background: linear-gradient(30deg, #f6bb73 0%, #fff 30%, #fff 65%, #f6bb73 100%);
 }
 
 /* logo image */
 header img {
   float: left;
   height: 80px; /* per instructions step 20 */
-  margin-right: 20px;
+  margin: 0.75em 1em;
+  border: 4px double var(--accent-color);
+  border-radius: 10px;
 }
 
 /* main header title */
 header h2 {
   font-size: 170%;
-  text-indent: 30px;
   margin: 0;
   color: #000;
+  padding-bottom: 0;
 }
 
 /* subheader text */
 header h3 {
   font-size: 130%;
   font-style: italic;
-  text-indent: 30px;
   margin: 0.4rem 0 0 0;
+  padding-bottom: 1em;
 }
 
 /* ---------- Main content ---------- */
@@ -52,6 +79,7 @@ main {
   max-width: 700px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 1em 1em 1em;
 }
 
 main h1, main h2 {
@@ -63,6 +91,8 @@ main h1, main h2 {
 main h1 {
   font-size: 1.5rem;
   color: #000;
+  border-top: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
 }
 
 main h2 {
@@ -72,19 +102,10 @@ main h2 {
 /* blockquote text */
 blockquote {
   font-style: italic;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
   margin: 1rem 2rem;
   color: #444;
-}
-
-/* unordered list spacing */
-ul {
-  list-style-type: disc;
-  margin-left: 2rem;
-  padding-left: 1rem;
-}
-
-ul li {
-  margin: 0.3rem 0;
 }
 
 /* speaker sections */
@@ -96,13 +117,15 @@ section img {
   display: block;
   margin-top: 0.5rem;
   height: 150px;
+  border: 4px double var(--accent-color);
+  border-radius: 10px;
 }
 
 /* ---------- Links ---------- */
 main a {
   color: blue;
   text-decoration: underline;
-  front-weight: normal;
+  font-weight: normal;
 }
 
 a:hover {
@@ -115,13 +138,16 @@ footer {
   font-size: 0.9rem;
   margin-top: 2rem;
   padding-top: 1rem;
-  color: #000;
-  border-top:none;
+  background-color: var(--accent-color);
+  color: white;
+  border-top: none;
 }
 
 footer p {
   margin: 0.2rem;
   text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
 /* ---------- Class for large text ---------- */
